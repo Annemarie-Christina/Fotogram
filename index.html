@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="generateImages ()">
+
+    <header class="header">
+        <img src="logo.png" class="logo-img" alt="Fotogram logo">
+    </header>
+    <main>
+        <h1 class="title">Your personal photo album</h1>
+        <div class="page-container" id="pageContainer"></div>
+    </main>
+
+    <dialog id="myDialog">
+        <div class="dialog-image">
+            <header class="dialog-header">
+                <p id="img-title">Image preview</p>
+                <button class="close-btn" onclick="closeDialog()">
+                    <img src="./close.png" alt="Close">
+                </button>
+            </header>
+
+            <div id="dialog-image"></div>
+
+            <footer class="dialog-footer">
+                <button id="prev" class="nav-btn">
+                    <img id="leftImage" tabindex="0" class="left" src="./left.png">
+                </button>
+
+                <p id="img-number">1/12</p>
+
+                <button id="next" class="nav-btn">
+                    <img id="rightImage" class="Next" src="./right.png">
+                </button>
+            </footer>
+        </div>
+    </dialog>
+
+    <footer class="footer">
+        <img src="fotogram.png" class="footer-bar" alt="footer background bar">
+        <img src="developer-akademie.png" class="footer-logo" alt="Developer Akademie logo">
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
