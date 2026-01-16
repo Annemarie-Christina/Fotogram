@@ -1,16 +1,16 @@
 let myImgs = [
     "Alaska.png",
-     "City.png", 
-     "Storm.png", 
-     "Bird.png", 
-     "Ocean.png", 
-     "Lake.png", 
-     "Forest.png", 
-     "Duck.png", 
-     "Iceberg.png", 
-     "Leopard.png", 
-     "Mountain.png", 
-     "Snow-tree.png"];
+    "City.png",
+    "Storm.png",
+    "Bird.png",
+    "Ocean.png",
+    "Lake.png",
+    "Forest.png",
+    "Duck.png",
+    "Iceberg.png",
+    "Leopard.png",
+    "Mountain.png",
+    "Snow-tree.png"];
 let currentIndex = 0;
 
 const prevBtn = document.getElementById("prev");
@@ -19,7 +19,7 @@ const imgNumber = document.getElementById("img-number");
 const imgTitleRef = document.getElementById("img-title")
 const dialog = document.getElementById("myDialog");
 dialog.addEventListener("click", function (e) {
-    if (e.target=== dialog) {
+    if (e.target === dialog) {
         dialog.close();
     }
 });
@@ -40,10 +40,10 @@ function zoomPhoto(index) {
     currentIndex = index;
     updateDialog();
     prevBtn.onclick = () => {
-    currentIndex = currentIndex ===0 ? myImgs.length - 1 : currentIndex -1;
- updateDialog();
+        currentIndex = currentIndex === 0 ? myImgs.length - 1 : currentIndex - 1;
+        updateDialog();
     };
-     
+
     nextBtn.onclick = () => {
         currentIndex = (currentIndex + 1) % myImgs.length;
         updateDialog();
@@ -51,16 +51,16 @@ function zoomPhoto(index) {
     dialog.showModal();
 }
 
-function closeDialog(){
+function closeDialog() {
     dialog.close();
 }
 
 function updateDialog() {
-   dialogImage.innerHTML = `<img class="inside-dialog-img" src="${myImgs[currentIndex]}">`;
-   imgTitleRef.innerHTML = myImgs[currentIndex];
-   imgNumber.innerHTML = `${currentIndex + 1} / ${myImgs.length}`;
+    dialogImage.innerHTML = `<img class="inside-dialog-img" src="${myImgs[currentIndex]}">`;
+    imgTitleRef.innerHTML = myImgs[currentIndex];
+    imgNumber.innerHTML = `${currentIndex + 1} / ${myImgs.length}`;
 
-    }
+}
 
 
 
